@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+    --color-physics-purple: #6D28D9;
+    --color-physics-dark: #111827;
+    --font-physics: "Impact", "Arial Black", sans-serif;
+    --color-primary-purple: #6D28D9;
+    --color-dark-bg: #111827;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #111827;
+    color: white;
+}
+
+/* Custom Scrollbar Styling - Seamless horizontal scroll */
+/* Modern CSS Scrollbar Properties (Firefox) */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #6D28D9 #111827;
+}
+
+/* Webkit Scrollbar Styling (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #111827;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #6D28D9;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+}
