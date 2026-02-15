@@ -6,6 +6,7 @@ import StorePage from './pages/StorePage';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import AdminRoute from './components/auth/AdminRoute';
+import Navbar from './components/shared/Navbar';
 import { useAuth } from './hooks/useAuth';
 
 /**
@@ -41,10 +42,14 @@ function App() {
       {/* Boot the auth session listener exactly once */}
       <AuthBootstrap />
 
+      {/* Global Navbar - appears on all pages */}
+      <Navbar />
+
       <Routes>
         {/* ── Public ───────────────────────────────────────────── */}
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/login" element={<SignUpPage />} />
 
         {/* ── Authenticated users (admin OR student) ───────────── */}
         <Route element={<ProtectedRoute />}>
